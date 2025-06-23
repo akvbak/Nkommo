@@ -1,7 +1,7 @@
 import requests
 
 # Rasa REST webhook URL
-RASA_WEBHOOK_URL = "https://promogo.souciance.com"
+RASA_WEBHOOK_URL = "http://localhost:5055/webhook"
 
 
 def parse_intent_with_rasa(sender_id: str, message: str, language: str):
