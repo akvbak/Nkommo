@@ -9,15 +9,15 @@ from langchain_chroma import Chroma
 from uuid import uuid4
 
 # configuration
-datapath = r"files"
-chromapath = r"chroma_db"
+datapath = r"Nkommo/files"
+chromapath = r"Nkommo/chroma_db"
 
 # initiate the embeddings model
 embeddings_model = OpenAIEmbeddings(model="text-embedding-3-large")
 
 # initiate the vector store
 vector_store = Chroma(
-    collection_name="EZPROMO",
+    collection_name="UGBuddy",
     embedding_function=embeddings_model,
     persist_directory=chromapath,
 )
@@ -40,6 +40,9 @@ chunks = text_splitter.split_documents(raw_documents)
 
 # creating unique ID's
 uuids = [str(uuid4()) for _ in range(len(chunks))]
+
+print(embeddings_model.embed_query("Hello UG!"))
+
 
 # adding chunks to vector store
 vector_store.add_documents(documents=chunks, ids=uuids)

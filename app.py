@@ -2,7 +2,7 @@ import gradio as gr
 from bot import stream_response
 
 with gr.Blocks() as demo:
-    gr.Markdown("# PROMOGo Chatbot")
+    gr.Markdown("# UG Buddy")
     with gr.Row():
         audio_input = gr.Audio(sources=["microphone","upload"], type="filepath", label="Upload Audio")
         text_input  = gr.Textbox(label="Or enter text message")

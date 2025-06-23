@@ -14,8 +14,8 @@ os.environ["OPENAI_API_KEY"] = api.APIKEY
 os.environ["GHANA_NLP_API_KEY"] = voice.APIKEY
 
 # Paths
-datapath = r"files"
-chromapath = r"chroma_db"
+datapath = r"Nkommo/files"
+chromapath = r"Nkommo/chroma_db"
 
 # Embeddings & Model
 embeddings_model = OpenAIEmbeddings(model="text-embedding-3-large")
@@ -24,7 +24,7 @@ nlp = GhanaNLP(voice.APIKEY)
 
 # Chroma vectorstore
 vector_store = Chroma(
-    collection_name="EZPROMO",
+    collection_name="UGBuddy",
     embedding_function=embeddings_model,
     persist_directory=chromapath,
 )
@@ -95,7 +95,7 @@ def stream_response(input_data, history, is_audio=False, source_lang="twi"):
     history.append((user_message, ""))
 
     # Rasa intent parsing
-    sender_id = "Promogo"
+    sender_id = "UGBuddy"
     intent, text_resp, conf = parse_intent_with_rasa(sender_id, user_message, source_code)
     print(f"[Rasa] intent={intent}, confidence={conf}")
     if intent and conf > 0.7:
