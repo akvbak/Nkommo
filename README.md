@@ -1,4 +1,4 @@
-# Nkommo
+# 🤖Nkommo|v1
 
 - This is a multilingual chatbot made to assist students with assignments and understanding basic school concepts.
 - The chatbot has the ability to understand text and voice input in many languages, such as English, Twi, Hausa, Ewe, Ga and Dagbani.
