@@ -4,7 +4,7 @@ from bot import stream_response
 with gr.Blocks(css=".gr-box {border-radius: 12px;}") as demo:
     gr.Markdown(
         """
-        # 🤖 Nkommo v1
+        # Nkommo🤖v1
         _Talk to your AI assistant in English or any supported Ghanaian language._
         """, 
         elem_id="title"

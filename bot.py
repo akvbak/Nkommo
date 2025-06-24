@@ -19,12 +19,12 @@ chromapath = r"Nkommo/chroma_db"
 
 # Embeddings & Model
 embeddings_model = OpenAIEmbeddings(model="text-embedding-3-large")
-llm = ChatOpenAI(model='gpt-4o', temperature=0.5)
+llm = ChatOpenAI(model='gpt-4o-mini', temperature=0.5)
 nlp = GhanaNLP(voice.APIKEY)
 
 # Chroma vectorstore
 vector_store = Chroma(
-    collection_name="🤖 Nkommo v1",
+    collection_name="Nkommov1",
     embedding_function=embeddings_model,
     persist_directory=chromapath,
 )
