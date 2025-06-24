@@ -24,7 +24,7 @@ nlp = GhanaNLP(voice.APIKEY)
 
 # Chroma vectorstore
 vector_store = Chroma(
-    collection_name="EZPROMO",
+    collection_name="🤖 Nkommo v1",
     embedding_function=embeddings_model,
     persist_directory=chromapath,
 )

@@ -1,6 +1,6 @@
 # Nkommo
 
-- This is a multilingual chatbot made to assist customers, suppliers and administrators navigate the PromoGo website and applications.
+- This is a multilingual chatbot made to assist students with assignments and understanding basic school concepts.
 - The chatbot has the ability to understand text and voice input in many languages, such as English, Twi, Hausa, Ewe, Ga and Dagbani.
 
 ---
@@ -8,7 +8,7 @@
 ## 🚀 How to Run
 
 ```bash
->> git clone https://github.com/PROMO-GHANA/PROMOGo-chatbot.git
+>> git clone https://github.com/akvbak/Nkommo.git
 >> python app.py
 ```
 
@@ -22,6 +22,6 @@ Then interact with the bot in your browser via the temporary Gradio link from th
 ---
 
 ## 🎯 To-do list:
-1. Integration by software devs 
+1. Adding intent classification with RASA
 2. Add support for executing commands such as adding/removing items from cart
 
