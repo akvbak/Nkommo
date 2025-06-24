@@ -6,7 +6,7 @@ with gr.Blocks(css=".gr-box {border-radius: 12px;}") as demo:
         """
         # Nkommo🤖v1
         _Talk to your AI assistant in English or any supported Ghanaian language._
-        """, 
+        """,
         elem_id="title"
     )
 
@@ -18,7 +18,7 @@ with gr.Blocks(css=".gr-box {border-radius: 12px;}") as demo:
                 label="🎤 Upload or Record Audio"
             )
             send_audio_btn = gr.Button("🎧 Send Audio", variant="primary")
-        
+
         with gr.Column(scale=1):
             text_input = gr.Textbox(
                 label="💬 Or type your message",
@@ -32,7 +32,7 @@ with gr.Blocks(css=".gr-box {border-radius: 12px;}") as demo:
         label="🌍 Select Language"
     )
 
-    chatbot = gr.Chatbot(label="🗨️ Chat History")
+    chatbot = gr.Chatbot(label="🗨️ Chat History", type="messages")
     state = gr.State([])
 
     send_audio_btn.click(
@@ -47,4 +47,8 @@ with gr.Blocks(css=".gr-box {border-radius: 12px;}") as demo:
         outputs=[chatbot, state]
     )
 
-demo.launch(share=True)
+# Enable queuing for smoother performance and concurrency
+    demo.queue()
+
+# Use share=False in production to reduce latency
+    demo.launch(share=False)
