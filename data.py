@@ -17,7 +17,7 @@ embeddings_model = OpenAIEmbeddings(model="text-embedding-3-large")
 
 # initiate the vector store
 vector_store = Chroma(
-    collection_name="UGBuddy",
+    collection_name="Nkommov1",
     embedding_function=embeddings_model,
     persist_directory=chromapath,
 )
@@ -41,7 +41,7 @@ chunks = text_splitter.split_documents(raw_documents)
 # creating unique ID's
 uuids = [str(uuid4()) for _ in range(len(chunks))]
 
-print(embeddings_model.embed_query("Hello UG!"))
+print(embeddings_model.embed_query("Bra y3n b) Nkommo"))
 
 
 # adding chunks to vector store
